@@ -19,7 +19,11 @@ export default function advice() {
     <div>
       <h1>{advice}</h1>
       <button onClick={getAdvice}>Get Advice</button>
-      <p>You've got {count} advice so far.</p>
+      <AdviceCount count={count} />
     </div>
   );
+}
+
+function AdviceCount(props) {
+  return <p>You have got {props.count} advice so far.</p>;
 }
